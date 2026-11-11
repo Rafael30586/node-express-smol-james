@@ -1,0 +1,18 @@
+{
+  "name": "chapter-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch --env-file=.env --experimental-strip-types --experimental-sqlite ./src/server.js"
+  },
+  "author": "Rafael",
+  "license": "ISC",
+  "description": "Aplicación full stack con SQLite",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
