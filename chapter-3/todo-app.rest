@@ -19,3 +19,18 @@ Content-Type: application/json
     "username": "sonic",
     "password":"123456"
 }
+
+
+### Fetch all todos GET /TODOS (protected)
+GET http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk0OTIwMTMzLCJleHAiOjE3OTUwMDY1MzN9.ggsc-YDNBlO1SkYwL8kmoKCroo_ULPb0RUDZHVYTdi4
+
+### Creates a new todo POST /TODOS (protected)
+POST http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk0OTIwMTMzLCJleHAiOjE3OTUwMDY1MzN9.ggsc-YDNBlO1SkYwL8kmoKCroo_ULPb0RUDZHVYTdi4
+Content-Type: application/json
+
+
+{
+    "task": "Multithreading in java"
+}
