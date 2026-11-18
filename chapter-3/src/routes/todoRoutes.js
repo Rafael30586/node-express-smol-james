@@ -22,7 +22,13 @@ router.post('/', (req,res)=>{
 
 // Actualizar un to-do
 router.put('/:id', (req,res)=>{
+    const {completed} = req.body
+    const {id} = req.params
+    const {page} = req.query // Esto sirve para procesar el parámetro page
 
+    const updatedTodo = db.prepare('UPDATE todos SET completed = ? WHERE id = ?')
+    updatedTodo.run(completed, id)
+    res.json({message: "Todo completed"}) 
 })
 
 // Borrar un to-do

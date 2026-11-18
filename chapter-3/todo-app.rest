@@ -23,14 +23,23 @@ Content-Type: application/json
 
 ### Fetch all todos GET /TODOS (protected)
 GET http://localhost:5003/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk0OTIwMTMzLCJleHAiOjE3OTUwMDY1MzN9.ggsc-YDNBlO1SkYwL8kmoKCroo_ULPb0RUDZHVYTdi4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk1MDA2MjU2LCJleHAiOjE3OTUwOTI2NTZ9.6BMNDYbHbP3qB80YyW-X_5VwSH6v4fR3OrJ9f7S1vMg
 
 ### Creates a new todo POST /TODOS (protected)
 POST http://localhost:5003/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk0OTIwMTMzLCJleHAiOjE3OTUwMDY1MzN9.ggsc-YDNBlO1SkYwL8kmoKCroo_ULPb0RUDZHVYTdi4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk1MDA0ODU2LCJleHAiOjE3OTUwOTEyNTZ9.x8HbNu-jWjVwHG6QrLwuBnGFt9sv4BxA6TlP7kxszU8
 Content-Type: application/json
 
 
 {
-    "task": "Multithreading in java"
+    "task": "Node + Prisma"
+}
+
+### Update a todo PUT /TODOS/:ID (protected)
+PUT http://localhost:5003/todos/2?page=4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk1MDA2MjU2LCJleHAiOjE3OTUwOTI2NTZ9.6BMNDYbHbP3qB80YyW-X_5VwSH6v4fR3OrJ9f7S1vMg
+Content-Type: application/json
+
+{
+    "completed": 1
 }
