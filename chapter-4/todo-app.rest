@@ -1,0 +1,50 @@
+### GET /
+GET http://localhost:5003
+
+### Registrar un usuario POST /AUTH/REGISTER
+POST http://localhost:5003/auth/register
+Content-Type: application/json
+
+{
+    "username": "sonic",
+    "password":"123456"
+}
+
+### Iniciar sesión con un usuario POST /AUTH/LOGIN
+
+POST http://localhost:5003/auth/login
+Content-Type: application/json
+
+{
+    "username": "sonic",
+    "password":"123456"
+}
+
+
+### Fetch all todos GET /TODOS (protected)
+GET http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk1MDkwOTQxLCJleHAiOjE3OTUxNzczNDF9.vy1hBzi8V54zAKERgmsw4UfgSEuLus1XNbAMMQ-2XCA
+
+### Creates a new todo POST /TODOS (protected)
+POST http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk1MDkwOTQxLCJleHAiOjE3OTUxNzczNDF9.vy1hBzi8V54zAKERgmsw4UfgSEuLus1XNbAMMQ-2XCA
+Content-Type: application/json
+
+
+{
+    "task": "Multithreading in java"
+}
+
+### Update a todo PUT /TODOS/:ID (protected)
+PUT http://localhost:5003/todos/2?page=4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk1MDkwOTQxLCJleHAiOjE3OTUxNzczNDF9.vy1hBzi8V54zAKERgmsw4UfgSEuLus1XNbAMMQ-2XCA
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### Update a todo PUT /TODOS/:ID (protected)
+DELETE http://localhost:5003/todos/2?page=4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzk1MDkwOTQxLCJleHAiOjE3OTUxNzczNDF9.vy1hBzi8V54zAKERgmsw4UfgSEuLus1XNbAMMQ-2XCA
+
